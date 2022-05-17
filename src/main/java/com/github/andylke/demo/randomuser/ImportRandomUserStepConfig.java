@@ -56,13 +56,11 @@ public class ImportRandomUserStepConfig {
   }
 
   @Bean
-  @StepScope
   public RandomUserToUserProcessor randomUserToUserProcessor() {
     return new RandomUserToUserProcessor();
   }
 
   @Bean
-  @StepScope
   public RepositoryItemWriter<? super User> userWriter() {
     return new RepositoryItemWriterBuilder<User>().repository(userRepository).build();
   }
