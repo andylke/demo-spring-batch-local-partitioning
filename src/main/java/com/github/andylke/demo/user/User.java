@@ -8,11 +8,15 @@ import javax.persistence.Id;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+import org.hibernate.annotations.Type;
 
 @Entity
 public class User {
 
-  @GeneratedValue @Id private UUID id;
+  @GeneratedValue
+  @Id
+  @Type(type = "uuid-char")
+  private UUID id;
 
   private String username;
 
